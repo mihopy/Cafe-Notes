@@ -1,0 +1,14 @@
+{% from "bootstrap5/form.html" import render_form %}
+
+{% extends "base.html" %}
+
+{% block title%}Home | Notes for Your Coffee{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4 text-center "> Edit Cafe Details </h2>
+    <div class="col-lg-8 col-md-10 mx-auto">
+        {{render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% from "bootstrap5/form.html" import render_form %}
+
+{% extends "base.html" %}
+
+{% block title%}Home | Notes for Your Coffee{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2> Search Result for "{{ query }}" </h2>
+    {% if results %}
+        <ul class="list-group mt-3">
+            {% for coffee in results %}
+                <li class="list-group-item">
+                    <h5>{{ coffee.cafe }} ({{ coffee.location }})</h5>
+                    <p>Rating: {{ coffee.rating }}/10</p>
+                    <p>Review: {{ coffee.review }}</p>
+                    <a href="{{ coffee.link }}"> View More</a>
+                </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <p> No results found.</p>
+    {% endif %}
+</div>
+{% endblock %}

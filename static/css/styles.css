@@ -1,0 +1,33 @@
+.card{
+    height: 100%;
+    }
+.coffee-img{
+    height: 200px;
+    object-fit: cover;
+    }
+.card-body{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    }
+
+.link-hover{
+  text-decoration: underline;
+  color: #007bff; /* Blue color for the link */
+  cursor: pointer;
+}
+
+.container py-4{
+    background-color:#DCDCDC;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.brush-script{
+    font-family: "Brush Script MT", cursive;
+    }
+
+.bg-dark-brown {
+    background-color: #4B2E2E;
+    color: white;
+}
